@@ -1,0 +1,91 @@
+<!-- Создать форму регистрации участников конференции: (10 баллов)
+
+Имя (должны быть указаны полностью фамилия, имя и отчество), 
+контактный телефон,
+адрес электронной почты, 
+список с секциями конференции (математика, физика, информатика)
+дата рождения
+доклад (переключатель), 
+если есть доклад – то отображается поле для ввода темы.  -->
+<!doctype html>
+
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Регистрация на конференцию</title>
+    <meta name="description" content="Регистрация участников конференции">
+    <meta name="author" content="Ekzis666">
+    <meta name="viewport" content="with">
+
+</head>
+
+
+<body>
+    <!-- шапка документа -->
+    <header>
+        <h3>ПТИ</h3>
+        <nav>
+            <ol>
+                <li><a href="index.html">На главную</a></li>
+                <li><a href="login.html">Авторизация</a></li>
+                <li><a href="conf_reg.html">Регистрация на конференцию</a></li>
+                <li><a href="">Фотогалерия</a></li>
+                <li><a href="">Сообщения</a></li>
+                <li><a href="">Верстка по макету</a></li>
+            </ol>
+        </nav>
+    </header>
+    <!-- основное содержимое    -->
+    <main>
+        <h1>Регистрация на конференцию</h1>
+        <form action="" method="POST">
+            <div>
+                <label for="user_name">Фамилия, имя и отчество</label>
+                <input type="text" name="user_name" id="user_name"  placeholder="фамилия имя отчество"
+                    pattern="[А-Я][а-я]+[ ][А-Я][а-я]+[ ][А-Я][а-я]+[ ]*" size="25">
+            </div>
+            <div>
+                <label for="tel">Контактный телефон</label>
+                <input type="tel" name="tel" id="tel" size="20">
+            </div>
+            <div>
+                <label for="email"> контактная электронная почта</label>
+                <input type="email" name="email" id="email" size="20">
+            </div>
+            <div>
+                <label for="section">Выберите секцию конференции</label>
+                <select name="section" id="section">
+                    <option value="0">математика</option>
+                    <option value="1">физика</option>
+                    <option value="2">информатика</option>
+                </select>
+            </div>
+            <div>
+                <label for="Speaker">участие с докладом</label>
+                <input type="checkbox" name="Speaker" id="speaker">
+            </div>
+            <div>
+                <label for="report">Тема доклада</label><br>
+                <textarea name="report" id="report" cols="20" rows="3"></textarea>
+            </div>
+            <div>  
+                выберите форму участия <br>
+                <input type="radio" checked value="очная форма" name="participation" id="online" > <label for="online">очная форма</label> <br>
+                <input type="radio"  value="заочнае форма" name="participation" id="offline"><label for="offline">дистанционная форма</label> <br>
+                <input type="radio"  value="очно-заочное" name="participation" id="combo"> <label for="combo">смешанная форма</label>
+            </div>
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </main>
+    <aside>
+        Это боковая панель :-)
+    </aside>
+    <!-- подвал -->
+    <footer>
+        <h3>2020 - 2021 учебный год</h3>
+    </footer>
+</body>
+
+</html>
